@@ -1,0 +1,74 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Pierre, Feuille, Ciseaux !</title>
+
+    <style>
+        body{
+            margin: 0;
+            font-family: Bahnschrift;
+            color: white;
+        }
+        .container{
+            min-height: 100vh;
+            background-color: dodgerblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .sub-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            width: 100px;
+            height: 30px;
+            background-color: unset;
+            border: solid 2px white;
+            color: white;
+            margin: 10px;
+            border-radius: 3px;
+            transition: background-color 500ms;
+        }
+        button:hover{
+            width: 100px;
+            height: 30px;
+            background-color: white;
+            border: solid 2px unset;
+            color: dodgerblue;
+            margin: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <p class="score">
+        Ordinateur
+        <span id="scoreBot">0</span>
+        -
+        <span id="scorePlayer">0</span>
+        Vous
+    </p>
+
+    <div class="sub-container">
+        <button id="pierre">Pierre</button>
+        <button id="feuille">Feuille</button>
+        <button id="ciseaux">Ciseaux</button>
+    </div>
+
+    <p id="message"></p>
+</div>
+
+<script src="js/game.js"></script>
+</body>
+</html>
